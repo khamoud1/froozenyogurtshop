@@ -1,0 +1,117 @@
+PS C:\Users\Anwender\pyt> mkdir frozen2
+
+
+    Directory: C:\Users\Anwender\pyt
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        17.08.2023     10:34                frozen2
+
+
+PS C:\Users\Anwender\pyt> cd .\frozen2\
+PS C:\Users\Anwender\pyt\frozen2> git clone git@github.com:khamoud1/froozenyogurtshop.git
+Cloning into 'froozenyogurtshop'...
+remote: Enumerating objects: 80, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 80 (delta 4), reused 1 (delta 0), pack-reused 68
+Receiving objects: 100% (80/80), 1.26 MiB | 2.39 MiB/s, done.
+Resolving deltas: 100% (14/14), done.
+PS C:\Users\Anwender\pyt\frozen2> cd .\froozenyogurtshop\
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> ls
+
+
+    Directory: C:\Users\Anwender\pyt\frozen2\froozenyogurtshop
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        17.08.2023     10:35                css
+d-----        17.08.2023     10:35                fonts
+d-----        17.08.2023     10:35                images
+d-----        17.08.2023     10:35                js
+-a----        17.08.2023     10:35           3564 about.html
+-a----        17.08.2023     10:35           3334 blog.html
+-a----        17.08.2023     10:35           3068 contact.html
+-a----        17.08.2023     10:35           2697 index.html
+-a----        17.08.2023     10:35           3189 product.html
+-a----        17.08.2023     10:35            153 README.md
+-a----        17.08.2023     10:35           3063 singlepost.html
+
+
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> git checkout -q -b dev_Hamoud_translation
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> git status
+On branch dev_Hamoud_translation
+nothing to commit, working tree clean
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> notepad.exe .\index.html
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> git status
+On branch dev_Hamoud_translation
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> git commit
+On branch dev_Hamoud_translation
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> git commit -a "translation added to the menu and footer "
+fatal: paths 'translation added to the menu and footer  ...' with -a does not make sense
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> git branch
+* dev_Hamoud_translation
+  main
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> git commit -m "translation added to the menu and footer "
+On branch dev_Hamoud_translation
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> git add .\index.html
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> git status
+On branch dev_Hamoud_translation
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> git push -u origin dev_Hamoud_translation
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'dev_Hamoud_translation' on GitHub by visiting:
+remote:      https://github.com/khamoud1/froozenyogurtshop/pull/new/dev_Hamoud_translation
+remote:
+To github.com:khamoud1/froozenyogurtshop.git
+ * [new branch]      dev_Hamoud_translation -> dev_Hamoud_translation
+branch 'dev_Hamoud_translation' set up to track 'origin/dev_Hamoud_translation'.
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> notepad.exe
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> notepad.exe .\index.html
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> git status
+On branch dev_Hamoud_translation
+Your branch is up to date with 'origin/dev_Hamoud_translation'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> git commit
+[dev_Hamoud_translation 4c18948] dded translation
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> git  push -u
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 391 bytes | 391.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:khamoud1/froozenyogurtshop.git
+   08d6b99..4c18948  dev_Hamoud_translation -> dev_Hamoud_translation
+branch 'dev_Hamoud_translation' set up to track 'origin/dev_Hamoud_translation'.
+PS C:\Users\Anwender\pyt\frozen2\froozenyogurtshop> notepad.exe befehle.txt
